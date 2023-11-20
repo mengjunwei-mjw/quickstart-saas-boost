@@ -86,7 +86,7 @@ Fork当前仓库到您的个人仓库
     2. 选择部署地域
     3. 填入支付宝沙箱信息（可跳过）
        <br/>
-       <img src="./7.png" alt="Image" width="800" height="200">
+       <img src="./7.png" alt="Image">
        <br/>
 
     4. 在流水线配置中，创建您的企业。根据前文fork的仓库信息创建Git连接凭证，填入前文fork的仓库地址。
@@ -141,7 +141,7 @@ Fork当前仓库到您的个人仓库
 
     3. 选择想要创建的服务实例套餐
        <br>
-       <img src="./15.png" alt="Image" width="700" height="700">
+       <img src="./15.png" alt="Image">
        <br>
 
     4. 使用沙箱应用中提供的账号密码进行支付测试。
@@ -199,7 +199,7 @@ Secret，以及支付宝处的私钥，公钥，应用网关地址和授权回�
    <br>
 2. 在阿里云控制台，访问运维编排-OOS工作台。点击参数仓库。
    <br>
-   <img src="./service-config-2.png" alt="Image" width=700" height="700">
+   <img src="./service-config-2.png" alt="Image">
    <br>
 
 3. 选择地域为服务实例部署地域，点击加密参数栏，在搜索框中搜索OOS加密参数名
