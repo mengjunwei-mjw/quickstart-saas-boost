@@ -90,7 +90,7 @@ Fork当前仓库到您的个人仓库
 
 #### 4. **创建计算巢服务实例**
 
-1. 访问[计算巢控制台](https://computenest.console.aliyun.com/)选择SaaS Boost一键部署服务
+1. 访问[计算巢控制台](https://computenest.console.aliyun.com/)选择[SaaS Boost一键部署服务](https://computenest.console.aliyun.com/service/instance/create/cn-hangzhou?type=user&ServiceId=service-fd1aec438c974828bb7b)
 2. 按照提示填写部署参数
     1. 选择要部署的服务。
     2. 选择部署地域
@@ -179,7 +179,7 @@ Fork当前仓库到您的个人仓库
 
 如果您还没有为您即将售卖的软件创建计算巢服务。请基于以下文档快速创建计算巢服务。
 
-1. 登录到计算巢控制台，选择"新建服务"
+1. 登录到[计算巢控制台](https://computenest.console.aliyun.com/)，选择[新建服务](https://computenest.console.aliyun.com/service/create/)
 
    ![img.png](./service-creation-1.png)
 2. 仿照下图配置，选择托管版服务和Spring Boot服务。
@@ -206,7 +206,7 @@ Secret，以及支付宝处的私钥，公钥，应用网关地址和授权回�
 
    ![image.png](./service-config-1.png)
 
-2. 在阿里云控制台，访问运维编排-OOS工作台。点击参数仓库。
+2. 在阿里云控制台，访问[运维编排-OOS工作台](https://oos.console.aliyun.com/)。点击[参数仓库](https://oos.console.aliyun.com/cn-huhehaote/parameter?tableType=secret)。
 
    <img src="./service-config-2.png" alt="Image">
 
@@ -222,11 +222,11 @@ Secret，以及支付宝处的私钥，公钥，应用网关地址和授权回�
 
 1. 对支付宝配置修改的前述步骤与"OAuth配置修改"的步骤（1-4）一致。
 
-2. 需要登录到支付宝（沙箱）控制台。对应用网关地址，授权回调地址和应用公钥进行修改和设置。
+2. 需要登录到支付宝（沙箱）[控制台](https://open.alipay.com/develop/sandbox/app)。对应用网关地址，授权回调地址和应用公钥进行修改和设置。
 
    <img src="./service-config-4.png" alt="Image">
 
-3. 在对OOS参数仓库加密参数修改完后。需要在支付宝处回填参数。同"服务实例创建的第四步"
+3. 在对OOS[参数仓库](https://oos.console.aliyun.com/cn-huhehaote/parameter?tableType=secret)加密参数修改完后。需要在支付宝处回填参数。同"服务实例创建的第四步"
 
 ### 套餐管理
 
