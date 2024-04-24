@@ -1,10 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # SaaS Boost使用与开发文档
 
 ## 介绍
@@ -49,6 +42,8 @@
 
 ### 参数说明
 
+#### ECS模版部署参数
+
 | 参数组       | 参数项                     | 说明                                                                         |
 |-----------|-------------------------|----------------------------------------------------------------------------|
 | 服务实例      | 服务实例名称                  | 长度不超过64个字符，必须以英文字母开头，可包含数字、英文字母、短划线（-）和下划线（_）                              |
@@ -67,6 +62,22 @@
 | 网络配置      | 是否新建VPC                 | 选择是否在当前可用区新建VPC                                                            |
 |           | 专有网络VPC实例Id             | 选择当前可用区下的VPC实例                                                             |
 |           | 交换机实例Id                 | 选择当前VPC支持的交换机                                                              |
+
+#### ACK模版部署参数
+
+| 参数组 | 参数项                     | 说明                                                                        |
+|---|-------------------------|---------------------------------------------------------------------------|
+| 服务实例 | 服务实例名称                  | 长度不超过64个字符，必须以英文字母开头，可包含数字、英文字母、短划线（-）和下划线（_）                             |
+|   | 地域                      | 服务实例部署的地域                                                                 |
+| 支付宝（沙箱）配置 | AlipayAppId             | 支付宝（沙箱）应用ID                                                               |
+|   | AlipayPid               | 支付宝（沙箱）应用商家Id                                                             |
+|   | AlipayPrivateKey        | 支付宝（沙箱）应用私钥                                                               |
+|   | AlipayOfficialPublicKey | 支付宝官方应用公钥                                                                 |
+| ACK集群配置  | 集群ID                    | 阿里云上购买的ACK集群                                                              |
+|   | POD安全角色应用               | 用于给POD分配合适的RAM角色，避免越权                                                     |
+| 镜像配置 | 服务端镜像                   | 前后端一起打包的镜像。包含boost.server和bootst.front                                    |
+|   | 定时任务镜像                  | boost.serverless                                                          |
+
 
 ### 部署流程
 
@@ -202,7 +213,7 @@ Fork当前仓库到您的个人仓库
 
 在Saas Boost平台上创建的每个商品应对应计算巢中的单个服务。商家可基于此服务为商品设定一个基础价格。
 
-##### 创建商品
+#### 创建商品
 
 1. 登录到Saas Boost。
 2. 导航至**商品管理**页面。
@@ -212,8 +223,7 @@ Fork当前仓库到您的个人仓库
 6. 点击提交，完成商品创建。
    ![image.png](./commodity-1.png)
 
-#### 套餐的创建与定价
-##### 计算巢侧的套餐
+#### 计算巢侧的套餐
 此处的套餐用于管理部署的软硬件参数。
 通过套餐设置功能，服务商可以将服务中的部分或全部参数配置为套餐，以供用户选择，避免用户在一个服务中配置较多参数导致的用户学习成本太高或者选配出错。
 
@@ -222,16 +232,16 @@ Fork当前仓库到您的个人仓库
 在创建服务实例时，必须选择一个套餐，再配置套餐外的参数即可创建服务实例。
 更详细的信息见计算巢官方文档：[配置套餐](https://help.aliyun.com/zh/compute-nest/create-package-settings-for-a-service)
 
-##### Saas Boost侧的套餐
+#### Saas Boost侧的套餐
 此处的套餐用于管理计算巢套餐的价格。
 在Saas Boost中为商品设定的每个套餐应对应计算巢中的相应服务套餐。每个套餐的名称必须与计算巢中的套餐名称完全一致。在这个过程中，开发者应该先在计算巢中进行[套餐配置](https://help.aliyun.com/zh/compute-nest/create-package-settings-for-a-service?spm=a2c4g.11174283.0.i5)，而后在SaaS Boost中对上述配置的套餐定制价格。
 
 
-##### 套餐命名统一
+#### 套餐命名统一
 
 为保证用户体验的一致性，请确保计算巢中的套餐名称与Saas Boost上的套餐名称相匹配。
 
-##### 添加SaaS Boost套餐与定价
+#### 添加SaaS Boost套餐与定价
 
 1. 选择已创建好的商品，并进入其套餐管理界面。
 2. 点击**新增套餐**，进入套餐详细配置页面。
