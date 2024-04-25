@@ -335,6 +335,13 @@ Fork当前仓库到您的个人仓库
 
 5. 在对OOS[参数仓库](https://oos.console.aliyun.com/cn-huhehaote/parameter?tableType=secret)加密参数修改完后。需要在支付宝处回填参数。同"服务实例创建的第四步"
 
+## 定时任务访问
+
+SaaS Boost的定时任务包括超时订单关闭，订单的退款处理，已完成的订单的状态修改等
+如果为ECS部署，则参照下图访问
+![img.png](job-1.png)
+如果为ACK部署方式，则请访问ACK的Job查看
+
 
 ## 常见错误及解决
 1. 流水线运行错误。
